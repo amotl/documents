@@ -3,7 +3,7 @@ Lightweight Scaling
 ===================
 
 **Synopsis**:
-An overview of Coroutines_ and `Non-blocking I/O`_/`Asynchronous Socket Programming`_, all related to `The C10K problem`_, focusing on the Python_ ecosystem.
+An overview of Coroutines_ and `Non-blocking I/O`_/`Asynchronous Socket Programming`_, all related to the `C10K problem`_, focusing on the Python_ ecosystem, mainly on Linux_.
 
 
 Standing on the shoulders of giants
@@ -187,7 +187,7 @@ Python articles and PEPs
     certain kinds of error that are easily made when writing such code, which
     otherwise tend to cause hard-to-diagnose symptoms.", `Gregory Ewing`_
     2009, `Asynchronous Servers in Python`_, "A look at a selection of asynchronous servers implemented in Python together with a Ping Pong benchmark, which measures the raw socket performance.", `Nicholas Piël`_  [sitesupport_]
-    2009, `Experimental HTTP server using Stackless Python`_, "This blog post documents my experiment to write a non-blocking_ HTTP server based on coroutines_ (tasklets_) of Stackless_ Python. My goal was to write a minimalistic web server server which can handle cuncurrent requests by using non-blocking_ system calls, multiplexing with select(2) or epoll_(2), returning a simple Hello, World page for each request, using the coroutines_ of Stackless_ Python. I've done this, and measured its speed using ApacheBench_, and compared it to the Hello, World server of Node.js_.", `Péter Szabó`_
+    2009, `Experimental HTTP server using Stackless Python`_, "This blog post documents my experiment to write a non-blocking_ HTTP server based on coroutines_ (tasklets_) of Stackless_ Python. My goal was to write a minimalistic web server server which can handle cuncurrent requests by using non-blocking_ system calls, multiplexing with select(2) or epoll_(2), returning a simple 'Hello, World' page for each request, using the coroutines_ of Stackless_ Python. I've done this, and measured its speed using ApacheBench_, and compared it to the 'Hello, World' server of Node.js_. Note: This eventually became Syncless_.", `Péter Szabó`_
     2010, `Feature comparison of Python non-blocking I/O libraries`_, "This blog post is a tabular feature comparison of Syncless_ and the 6 most popular event-driven_ and coroutine-based_ non-blocking_ (asynchronous) networking I/O libraries for Python. It was inspired by `Asynchronous Servers in Python`_ (published on 2009-11-22), which compares the features and the performance of 14 Python non-blocking_ networking I/O libraries. We're not comparing generator_-based (yield) solutions here. We haven't made performance measurements, so speed-related claims in this comparison are beliefs and opinions rather than well-founded facts.", `Péter Szabó`_
     2010, `Benchmark of Python WSGI Servers`_, "A look at how different WSGI servers perform at the handling of a full HTTP request.", `Nicholas Piël`_  [sitesupport_]
     "2011", `Emulating Stackless and greenlet with each other`_ [EuroPython2011_], "Stackless Python and the greenlet package for CPython are two different implementations of coroutine support for Python. (Coroutines are fundamental building blocks of I/O frameworks like gevent, Eventlet, Concurrence and Syncless to conveniently handle thousands of socket connections at a time without creating threads.) Stackless and greenlet implement a different interface. However, each is powerful enough so that it can be used to emulate the other one. In this talk we explore the differences and discuss design decisions and testing strategies of the emulations we have implemented.", `Péter Szabó`_
@@ -231,8 +231,8 @@ Python implementations
     2008, cogen_, "Crossplatform asynchronous network oriented python framework based on python 2.5 enhanced generators. cogen_ is a crossplatform library for network oriented, coroutine_ based programming using the `enhanced generators`_ from python 2.5. The project aims to provide a simple straightforward programming model similar to threads_ but without all the problems and costs. cogen's goal is to enable writing code in a seemingly synchronous and easy manner in the form of generators_ that yield calls and receive the result from that yield. These calls translate to asynchronous and fast os calls in cogen's internals. Includes an enhanced WSGI server. See also: `cogen and greenlets`_", `Maries Ionel Cristian`_
     2009, python-multitask_, "`Cooperative multitasking`_ and `asynchronous I/O`_ using Python generators_. python-multitask_ allows Python programs to use generators_ (a.k.a. coroutines_) to perform `cooperative multitasking`_ and `asynchronous I/O`_. Applications written using multitask consist of a set of cooperating tasks that yield to a shared task manager whenever they perform a (potentially) blocking operation, such as I/O on a socket or getting data from a queue. The task manager (scheduler_) temporarily suspends the task (allowing other tasks to run in the meantime) and then restarts it when the blocking operation is complete. Such an approach is suitable for applications that would otherwise have to use ``select()`` and/or multiple threads_ to achieve concurrency.", `Christopher Stawarz`_
     2009, gevent_, "Combines libevent_ with coroutines_ (gevent.core_, `gevent event loop`_), but does it right. See `Comparing gevent to eventlet`_. Programming model: `lightweight threads`_, making your code feel synchronous.", `Denis Bilenko`_ [sitesupport_]
-    2009, Syncless_, "Syncless is a non-blocking_ (asynchronous) concurrent client and server socket network communication library for Stackless_ Python 2.6 (and also for regular Python_ with greenlet_). For high speed, Syncless_ uses libev_ (and libevent_) for event notification, and parts of Syncless_ ' code is implemented in Pyrex_/Cython_ and C_. This alone makes Syncless_ faster than many other non-blocking_ network libraries for Python_. Syncless_ contains an asynchronous DNS resolver (using evdns_) and a HTTP server capable of serving WSGI_ applications. Syncless_ aims to be a coroutine_-based alternative of event-driven networking engines (such as Twisted_, asyncore_, pyevent_, python-libevent_ and FriendFeed's Tornado_), and it's a competitor of gevent_, Eventlet_ and Concurrence_. See also: `Experimental HTTP server using Stackless Python`_", `Péter Szabó`_
     2009, Concurrence_, "Concurrence_ is a framework for creating massively concurrent network applications in Python. It takes a Lightweight-tasks-with-message-passing approach to concurrency. The goal of Concurrence is to provide an easier programming model for writing high performance network applications than existing solutions (Multi-threading_, Twisted_, asyncore_ etc). Concurrence_ uses `Lightweight tasks`_ in combination with libevent_ to expose a high-level synchronous API to low-level `asynchronous IO`_. Fast low-level IO buffers implemented in Pyrex_. DBAPI 2.0 compatible MySQL driver implementation (native & asynchronous, with optimized protocol support written in Pyrex_). Upcoming: Improved Memcache support (Ketama hashing, Connection Management).", Henk Punt
+    2009, Syncless_, "Syncless is a non-blocking_ (asynchronous) concurrent client and server socket network communication library for Stackless_ Python 2.6 (and also for regular Python_ with greenlet_). For high speed, Syncless_ uses libev_ (and libevent_) for event notification, and parts of Syncless_ ' code is implemented in Pyrex_/Cython_ and C_. This alone makes Syncless_ faster than many other non-blocking_ network libraries for Python_. Syncless_ contains an asynchronous DNS resolver (using evdns_) and a HTTP server capable of serving WSGI_ applications. Syncless_ aims to be a coroutine_-based alternative of event-driven networking engines (such as Twisted_, asyncore_, pyevent_, python-libevent_ and FriendFeed's Tornado_), and it's a competitor of gevent_, Eventlet_ and Concurrence_. See also: `Experimental HTTP server using Stackless Python`_", `Péter Szabó`_
     2010, monocle_, "monocle_ - An async programming framework with a blocking look-alike syntax. monocle_ straightens out event-driven_ code using Python's generators_. It aims to be portable between event-driven_ I/O frameworks, and currently supports Twisted_ and Tornado_. It's for Python 2.5 and up.", Greg Hazel and `Steven Hazel`_.
 
 
@@ -249,8 +249,32 @@ Other implementations/resources
     1993, ACE_, "The ADAPTIVE Communication Environment (ACE) is a freely available, open-source object-oriented (OO) framework that implements many core patterns for concurrent communication software. Esp. see: `ACE Reactor\: event demultiplexing and event handler dispatching`_", ""
     1996, `POE\: Perl Object Environment`_, "POE is a Perl framework for `reactive systems`_, `cooperative multitasking`_, and network applications. It supports 10 different `event loops`_. See also: `POE Whitepaper`_", `Rocco Caputo`_
     1998, JAWS_, "The JAWS Adaptive Web Server - An Application Framework for High Performance Web Systems. Based on ACE_.", ""
-    1999, `The C10K problem`_, "`Interesting scalable server implementations`_", `Dan Kegel`_
+    1999, The `C10K problem`_, "`Interesting scalable server implementations`_", `Dan Kegel`_
+    2001, `epoll - I/O event notification facility`_, "TODO", `Davide Libenzi`_
     2001, `Coroutines for Ruby`_, "Coroutines allow blocks to run concurrently while you control when the context is switched between them.", `Marc De Scheemaecker`_
+    2002, `Linux File AIO`_, "Kernel Asynchronous I/O (AIO) Support for Linux_. AIO enables even a single application thread_ to overlap I/O operations with other processing, by providing an interface for submitting one or more I/O requests in one system call (``io_submit()``) without waiting for completion, and a separate interface (``io_getevents()``) to reap completed I/O operations associated with a given completion group.
+    
+    The AIO implementation presented here should have similar performance characteristics to the event interface that /dev/epoll uses, as both models have a 1-1 correlation between events being generated and the potential for progress to be made.
+    
+    One area where AIO poll differs significantly from /dev/epoll stems from readiness vs ready state notification: an async poll is like poll in that the operation completes when the descriptor has one of the specified events pending. However, /dev/epoll only generates an event when the state of the monitored events changes.
+    
+    See also: `An AIO Implementation and its Behaviour`_ and `Linux Asynchronous I/O Design`_
+    ", Benjamin C. R. LaHaise`
+    2002, nginx_, "Nginx is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.
+    
+    Nginx is known for its high performance, stability, rich feature set, simple configuration, and low resource consumption.
+
+    Nginx is one of a handful of servers written to address the `C10K problem`_. Unlike traditional servers, Nginx doesn't rely on threads_ to handle requests. Instead it uses a much more scalable event-driven_ (asynchronous) architecture. This architecture uses small, but more importantly, predictable amounts of memory under load.
+    Even if you don't expect to handle thousands of simultaneous requests, you can still benefit from Nginx's high-performance and small memory footprint. Nginx scales in all directions: from the smallest VPS all the way up to clusters of servers.
+    
+    Architecture and scalability:
+        - One master process and several workers processes
+        - The notification methods: kqueue_ (FreeBSD 4.1+), epoll_ (Linux 2.6+), rt signals (Linux 2.2.19+), `/dev/poll`_ (Solaris 7 11/99+), `event ports`_ (Solaris 10), select_, and poll_
+        - sendfile_
+        - `File AIO`_
+        - 10,000 inactive HTTP keep-alive connections take about 2.5M memory
+    
+    See also: `nginx\: Architecture and scalability`_", `Igor Sysoev`_
     2003, `Java NIO\: New I/O APIs`_, "The new I/O (NIO) APIs introduced in Java v1.4 provide new features and improved performance in the areas of buffer management, scalable network and file I/O, character-set support, and regular-expression matching. Esp. A multiplexed, non-blocking I/O facility for writing scalable servers.", Sun Microsystems
     2004, `Apache Event MPM`_, "Event-based multi-processing module for the `Apache HTTP Server`_ based on epoll_/Kqueue_.", ""
     2004, `Apache MINA`_, "A Multi-purpose Infrastructure for Network Applications. A network application framework which helps users develop high performance and high scalability network applications easily. It provides an abstract event-driven asynchronous API over various transports such as TCP/IP and UDP/IP via Java NIO. See also: `Introduction to MINA`_.", `Trustin Lee`_
@@ -266,6 +290,7 @@ Other implementations/resources
     2009, Node.js_, "Evented I/O for `V8 JavaScript`_. Node.js is a server-side JavaScript environment that uses an asynchronous event-driven model. This allows Node.js to get excellent performance based on the architectures of many Internet applications.", "`Ryan Dahl`_, `Isaac Schlueter`_"
     2010, Gretty_, "Gretty is simple framework for networking, both building web servers and clients. Built on top of netty, it supports NIO style http server, asynchronous http client. It also supports both websocket server and client. See also: `512000 concurrent websockets with Groovy++ and Gretty`_.", Alex Tkachman
     2010, async-http-client_, "Asynchronous Http Client library for Java. The library uses Java non blocking I/O for supporting asynchronous operations. The default asynchronous provider is build on top of Netty_, the Java NIO Client Server Socket Framework from JBoss, but the library exposes a configurable provider SPI which allows to easily plug in other frameworks.", "`Jeanfrancois Arcand`_, Ning Inc."
+
 
 Details and outlook
 -------------------
@@ -342,7 +367,7 @@ Architectures
 .. _circuits: https://bitbucket.org/prologic/circuits/
 .. _Chiral: http://git.emarhavil.com/chiral.git
 
-.. # Misc
+.. # Other components: libraries, modules, frameworks
 .. _ACE: http://www1.cse.wustl.edu/~schmidt/ACE.html
 .. _ACE Reactor\: event demultiplexing and event handler dispatching: http://www1.cse.wustl.edu/~schmidt/ACE-papers.html#reactor
 .. _JAWS: http://www.dre.vanderbilt.edu/JAWS/
@@ -359,6 +384,16 @@ Architectures
 .. _Icon generators: http://en.wikipedia.org/wiki/Icon_%28programming_language%29#Generators
 .. _Node.js: http://nodejs.org/
 .. _V8 JavaScript: http://code.google.com/p/v8/
+.. _nginx: http://nginx.org/en/
+.. _nginx\: Architecture and scalability: http://nginx.org/en/#architecture_and_scalability
+
+.. # Linux Kernel
+.. _Linux: http://www.kernel.org/
+.. _Linux File AIO: http://lse.sourceforge.net/io/aio.html
+.. _An AIO Implementation and its Behaviour: http://www.linuxsymposium.org/archives/OLS/Reprints-2002/lahaise-reprint.pdf
+.. _Linux Asynchronous I/O Design: Evolution & Challenges: http://www.kernel.org/pub/linux/kernel/people/suparna/aio-linux.pdf
+
+.. # Misc
 .. _ApacheBench: http://httpd.apache.org/docs/2.0/programs/ab.html
 
 .. # Java
@@ -412,7 +447,7 @@ Architectures
 .. _Benchmark of Python WSGI Servers: http://nichol.as/benchmark-of-python-web-servers
 .. _libev and libevent: http://blog.gevent.org/2011/04/28/libev-and-libevent/
 .. _Comparing gevent to eventlet: http://blog.gevent.org/2010/02/27/why-gevent/
-.. _The C10K problem: http://www.kegel.com/c10k.html
+.. _C10K problem: http://www.kegel.com/c10k.html
 .. _Interesting scalable server implementations: http://www.kegel.com/c10k.html#examples
 .. _Charming Python\: Inside Pythons implementations: http://www.ibm.com/developerworks/library/l-pyth7/
 .. _Charming Python\: Iterators and simple generators: http://www.ibm.com/developerworks/library/l-pycon/
@@ -526,6 +561,8 @@ Architectures
 .. _James Mills: http://prologic.shortcircuit.net.au/
 .. _Ryan Dahl: http://tinyclouds.org/
 .. _Isaac Schlueter: http://foohack.com/
+.. _Igor Sysoev: http://sysoev.ru/en/
+.. _Davide Libenzi: http://www.xmailserver.org/davide.html
 
 .. # Misc
 .. _EuroPython2011: http://ep2011.europython.eu/

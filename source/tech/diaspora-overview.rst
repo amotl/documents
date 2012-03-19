@@ -3,10 +3,15 @@ Diaspora Overview
 =================
 
 ------------
-Specs et al.
+Architecture
 ------------
-- https://github.com/diaspora/diaspora/wiki/API-v1http://wiki.spored.de/
+- https://github.com/diaspora/diaspora/wiki/Security-Architecture-Proposal
 - http://wiki.spored.de/w/Pod_Komponenten
+
+---
+API
+---
+- https://github.com/diaspora/diaspora/wiki/API-v1
 
 ---------------
 Protocol et al.

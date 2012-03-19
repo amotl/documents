@@ -21,28 +21,28 @@ https://github.com/diaspora/diaspora/wiki/Semantic-Markdown
 On the shoulders of giants
 --------------------------
 
-* | WebFinger protocol
-  | http://en.wikipedia.org/wiki/Webfinger
-  | http://code.google.com/p/webfinger/wiki/WebFingerProtocol
-* | hCard
-  | http://en.wikipedia.org/wiki/HCard
-  | http://microformats.org/wiki/hcard
-* | Activity Streams
-  | http://en.wikipedia.org/wiki/Activity_Streams_(format)
-  | http://activitystrea.ms/
-* | PubSubHubbub
-  | http://en.wikipedia.org/wiki/PubSubHubbub
-  | http://code.google.com/p/pubsubhubbub/
-  | http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html
-* | OAuth
-  | http://en.wikipedia.org/wiki/Oauth
-  | http://tools.ietf.org/html/rfc5849
-  | http://oauth.net/
-* | PGP
-  | http://en.wikipedia.org/wiki/Pretty_Good_Privacy
-* | RSA
-  | http://en.wikipedia.org/wiki/RSA_(algorithm)
-  | http://en.wikipedia.org/wiki/Public-key_cryptography
+* WebFinger protocol
+  - http://en.wikipedia.org/wiki/Webfinger
+  - http://code.google.com/p/webfinger/wiki/WebFingerProtocol
+* hCard
+  - http://en.wikipedia.org/wiki/HCard
+  - http://microformats.org/wiki/hcard
+* Activity Streams
+  - http://en.wikipedia.org/wiki/Activity_Streams_(format)
+  - http://activitystrea.ms/
+* PubSubHubbub
+  - http://en.wikipedia.org/wiki/PubSubHubbub
+  - http://code.google.com/p/pubsubhubbub/
+  - http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html
+* OAuth
+  - http://en.wikipedia.org/wiki/Oauth
+  - http://tools.ietf.org/html/rfc5849
+  - http://oauth.net/
+* PGP
+  - http://en.wikipedia.org/wiki/Pretty_Good_Privacy
+* RSA
+  - http://en.wikipedia.org/wiki/RSA_(algorithm)
+  - http://en.wikipedia.org/wiki/Public-key_cryptography
 
 -----------------------
 Planning and Discussion

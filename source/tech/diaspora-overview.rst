@@ -5,21 +5,21 @@ Diaspora Overview
 ------------
 Specs et al.
 ------------
-https://github.com/diaspora/diaspora/wiki/API-v1http://wiki.spored.de/
-http://wiki.spored.de/w/Pod_Komponenten
+- https://github.com/diaspora/diaspora/wiki/API-v1http://wiki.spored.de/
+- http://wiki.spored.de/w/Pod_Komponenten
 
 ---------------
 Protocol et al.
 ---------------
-https://github.com/diaspora/diaspora/wiki/Terminology
-https://github.com/diaspora/diaspora/wiki/Diaspora%27s-federation-protocol
-https://github.com/diaspora/diaspora/wiki/Message-passing-in-Diaspora
-https://github.com/diaspora/diaspora/wiki/Message-Formatting
-https://github.com/diaspora/diaspora/wiki/Semantic-Markdown
+- https://github.com/diaspora/diaspora/wiki/Terminology
+- https://github.com/diaspora/diaspora/wiki/Diaspora%27s-federation-protocol
+- https://github.com/diaspora/diaspora/wiki/Message-passing-in-Diaspora
+- https://github.com/diaspora/diaspora/wiki/Message-Formatting
+- https://github.com/diaspora/diaspora/wiki/Semantic-Markdown
 
---------------------------
-On the shoulders of giants
---------------------------
+-----------------------------------
+Standing on the shoulders of giants
+-----------------------------------
 
 * WebFinger protocol
     - http://en.wikipedia.org/wiki/Webfinger
@@ -59,4 +59,4 @@ Planning and Discussion
 -----
 Users
 -----
-https://github.com/diaspora/diaspora/wiki/FAQ-for-Users
+- https://github.com/diaspora/diaspora/wiki/FAQ-for-Users
